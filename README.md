@@ -1,6 +1,6 @@
 # Solution for the factory puzzle
 
-The puzzle was described here: TODO
+The puzzle was described in the article [Single out element using phantom types](https://jfmengels.net/single-out-elements-using-phantom-types/).
 
 To test, run:
 
