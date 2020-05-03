@@ -24,11 +24,9 @@ The 1st argument to `createGreenCarFactory` is not what I expect:
 
 This argument is an anonymous function of type:
 
-    data -> List (Factory.Car {})
+    data -> List (Factory.Car Factory.Polluting)
 
 But `createGreenCarFactory` needs the 1st argument to be:
 
-    data -> List (Factory.Car { green : () })
-
-Hint: Looks like the green field is missing.
+    data -> List (Factory.Car Factory.Green)
 ```

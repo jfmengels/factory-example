@@ -1,6 +1,8 @@
 module Factory exposing
     ( Car
     , Factory
+    , Green
+    , Polluting
     , createCarFactory
     , createGreenCarFactory
     , dieselCar
@@ -22,7 +24,7 @@ createCarFactory factoryFn =
     Factory
 
 
-createGreenCarFactory : (data -> List (Car { green : () })) -> Factory
+createGreenCarFactory : (data -> List (Car Green)) -> Factory
 createGreenCarFactory factoryFn =
     Factory
 
@@ -37,6 +39,14 @@ type Car fuel
     | DieselCar
 
 
+type Polluting
+    = Polluting
+
+
+type Green
+    = Green
+
+
 electricCar : Car fuel
 electricCar =
     ElectricCar
@@ -47,6 +57,6 @@ hydrogenCar =
     HydrogenCar
 
 
-dieselCar : Car {}
+dieselCar : Car Polluting
 dieselCar =
     DieselCar
